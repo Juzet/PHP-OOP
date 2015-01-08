@@ -84,11 +84,11 @@
 		public $type = “default type”;
 		public $year = “2015”;
 		public $price = 40000;
-	function getCar() {
-			return “{$this­>brand}” .“{$this­>type}”;
+		function getCar() {
+			return “{$this­>brand}” . “{$this­>type}”;
 		}
 	}
-	$car1 = new Dog();
+	$car1 = new Car();
 	$car1­>brand = “Mercedes”;
 	$car1­>type = “Sedan”;
 	print “This car is a {$car1­>Car()}.”;
@@ -99,8 +99,8 @@
 		public $type = “default type”;
 		public $size = “6”;
 		public $price = 99.99;
-	function getShoe() {
-			return “{$this­>brand}” .“{$this­>type}”;
+		function getShoe() {
+			return “{$this­>brand}” . “{$this­>type}”;
 		}
 	}
 	$shoe1 = new Shoe();
@@ -113,8 +113,8 @@
 		public $type = “default type”;
 		public $amount = “1”;
 		public $price = 10;
-	function getFood() {
-			return “{$this­>brand}” .“{$this­>type}”;
+		function getFood() {
+			return “{$this­>brand}” . “{$this­>type}”;
 		}
 	}
 	$food1 = new Food();
@@ -122,4 +122,64 @@
 	$food1­>type = “Fuego”;
 	print “This food is called {$food1­>getFood()}.”;
 	//This food is called Takis Fuego
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+<!-- EXAMPLE 1 -->
+	class Me{
+		public first = $first;
+		public middle = $middle;
+		public last = $last;
+	
+		function__construct($first,$middle,$last) {
+			$this­>first = $first;
+			$this­>middle = $middle;
+			$this­>last = $last;
+		}
 
+		function getMe() {
+			return "{$this->first}" . "{$this->last}";
+		}
+	}
+	
+	class Lion{
+		public fierce = $fierce;
+		public roar = $roar;
+		public mane = $mane;
+	
+		function__construct($fierce,$roar,$mane) {
+			$this­>fierce = $fierce;
+			$this­> roar = $roar;
+			this­> mane = $mane;
+		}
+
+		function getLion() {
+			return "{$this->fierce}" . "{$this->mane}";
+		}
+	}
+
+
+	class Tv{
+		public movie = $movie;
+		public commercial = $commercial;
+		public show = $show;
+	
+		function__construct($movie,$commercial,$show) {
+			$this­>movie = $movie;
+			$this­>commercial = $commercial;
+			$this­>show = $show;
+		}
+
+		function getTv() {
+			return "{$this->movie}" . "{$this->show}";
+		}
+	}
+
+<!-- EXAMPLE 2 -->
+
+	$me1 = newMe("Juzet","A","Arana");
+	print "Me1: {$me1->getMe()}";
+	
+	$lion1 = newLion("Strong","Pretty","Dangerous");
+	print "Lion1: {$lion1->getLion()}";
+	
+	$tv1 = newTV("LOL","Verizon","The Flash");
+	print "Tv1: {$tv1->getTv()}";
