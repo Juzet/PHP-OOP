@@ -6,6 +6,8 @@
 		public $jeans;
 		public $shorts;
 		public $jacket;
+		// public $dress;
+		// public $underwear;
 
 		function __construct($shirt, $jeans, $shorts, $jacket)
 		{
@@ -13,25 +15,32 @@
 			$this->jeans = $jeans;
 			$this->shorts = $shorts;
 			$this->jacket = $jacket;
+			// $this->dress = $dress;
+			// $this->underwear = $underwear;
 		}
 
 		function Juzet() 
 		{
 			return "shirt: " . $this->shirt . "<br />" . 
-					"jeans: " . $this->jeans . "<br />" . 
-				    "shorts: " . $this->shorts . "<br />" .
-				     "jacket: " . $this->jacket; 
-
+				   "jeans: " . $this->jeans . "<br />" . 
+				   "shorts: " . $this->shorts . "<br />" .
+				   "jacket: " . $this->jacket;
 		}
 	}
 
 
 	class forever extends Clothes {
-
+		function __construct($shirt, $jeans, $shorts, $jacket, $dress) {
+			parent:: __construct($shirt, $jeans, $shorts, $jacket);
+			$this->dress = $dress;
+		}
+		function when() {
+			return $this->dress;
+		}
 	}
 
 
-	$type1 = new forever("T-Shirt", "Skinny Jeans", "Daisy Duke Shorts", "Hoodie Jacket");
+	$type1 = new forever("T-Shirt", "Skinny Jeans", "Daisy Duke Shorts", "Hoodie Jacket", "Cocktail", "Briefs");
 	echo $type1->Juzet();
 
 		
@@ -64,7 +73,13 @@
 
 
 	class yum extends Food {
-
+		function __construct($pizza, $hamburger, $chips, $salad, $pie) {
+			parent:: __construct($pizza, $hamburger, $chips, $salad);
+			$this->pie = $pie;
+		}
+		function what() {
+			return $this->pie;
+		}
 	}
 
 
@@ -101,7 +116,13 @@
 
 
 	class life extends Cars {
-
+	function __construct($van, $sedan, $convertible, $suv, $truck) {
+			parent:: __construct($van, $sedan, $convertible, $suv);
+			$this->truck = $truck;
+		}
+		function when() {
+			return $this->truck;
+		}	
 	}
 
 
