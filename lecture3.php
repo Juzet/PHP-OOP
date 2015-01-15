@@ -1,35 +1,31 @@
 <?php
-$hi = false;
-$bye = true;
-if (is_bool($hi) === true) {
-	echo "Yes, this is a boolean";
+if (is_integer(1234567)) {
+	echo "It is an interger" . "<br />";
 }
 else {
-	echo "No, this is not a boolean";
-}
-$new = array('please' , 'do' , 'work');
-
-echo is_array($new) ? '<p>Ijn</P>' : 'is not an Array';
-// echo "\n";</br>
-
-$old = 'blahs'; 
-
-echo is_array($old) ? 'I' : '<p>mean I guess</p>';
-
-function get_me($oj)
-{
-    if (!is_object($oj)) {
-        return false;
-    }
-
-    return $oj->me;
+	echo "It is not an interger";
+	var_dump(is_integer(090979));
+	var_dump(is_integer(151768));
+	var_dump(is_integer(1878739));
+	var_dump(is_integer("false"));
 }
 
-// Declare a new class instance and fill up 
-// some values
-$oj = new stdClass();
-$oj->me = array('<p>Juzet', 'Ron', 'Fen</p>');
-
-var_dump(get_me(null));
-var_dump(get_me($oj));
+if (is_bool(true)) {
+	echo "It is a boolean" . "<br />";
+}
+else {
+	echo "It is not a boolean";
+	var_dump(is_bool(090979));
+	var_dump(is_bool("jdfnj"));
+	var_dump(is_bool("false"));
+}
+if (is_null("africa")) {
+	echo "It is null" . "<br />";
+}
+else {
+	echo "It is not null";
+	var_dump(is_null("10"));
+	var_dump(is_null("john"));
+	var_dump(is_null("true"));
+}
 ?>

@@ -6,8 +6,6 @@
 		public $jeans;
 		public $shorts;
 		public $jacket;
-		// public $dress;
-		// public $underwear;
 
 		function __construct($shirt, $jeans, $shorts, $jacket)
 		{
@@ -15,16 +13,15 @@
 			$this->jeans = $jeans;
 			$this->shorts = $shorts;
 			$this->jacket = $jacket;
-			// $this->dress = $dress;
-			// $this->underwear = $underwear;
+
 		}
 
 		function Juzet() 
 		{
-			return "shirt: " . $this->shirt . "<br />" . 
-				   "jeans: " . $this->jeans . "<br />" . 
-				   "shorts: " . $this->shorts . "<br />" .
-				   "jacket: " . $this->jacket;
+			return "Shirt: " . $this->shirt . "<br />" . 
+				   "Jeans: " . $this->jeans . "<br />" . 
+				   "Shorts: " . $this->shorts . "<br />" .
+				   "Jacket: " . $this->jacket;
 		}
 	}
 
@@ -35,13 +32,14 @@
 			$this->dress = $dress;
 		}
 		function when() {
-			return $this->dress;
+			return "Dress:" . $this->dress . "<br />";
 		}
 	}
 
 
-	$type1 = new forever("T-Shirt", "Skinny Jeans", "Daisy Duke Shorts", "Hoodie Jacket", "Cocktail", "Briefs");
-	echo $type1->Juzet();
+	$type1 = new forever("T-Shirt", "Skinny Jeans", "Daisy Duke Shorts", "Hoodie Jacket", "Cocktail");
+	echo $type1->Juzet() . "<br />";
+	echo $type1->when();
 
 		
 
@@ -63,10 +61,10 @@
 
 		function No() 
 		{
-			return "<br />" . "pizza: " . $this->pizza . "<br />" . 
-					"hamburger: " . $this->hamburger . "<br />" . 
-				    "chips: " . $this->chips . "<br />" .
-				     "salad: " . $this->salad; 
+			return "<br />" . "Pizza: " . $this->pizza . "<br />" . 
+					"Hamburger: " . $this->hamburger . "<br />" . 
+				    "Chips: " . $this->chips . "<br />" .
+				     "Salad: " . $this->salad; 
 
 		}
 	}
@@ -74,19 +72,18 @@
 
 	class yum extends Food {
 		function __construct($pizza, $hamburger, $chips, $salad, $pie) {
-			parent:: __construct($pizza, $hamburger, $chips, $salad);
+			parent::__construct($pizza, $hamburger, $chips, $salad);
 			$this->pie = $pie;
 		}
 		function what() {
-			return $this->pie;
+			return "Pie:" . $this->pie . "<br />";
 		}
 	}
 
 
-	$first1 = new yum("Pepperoni", "Cheese", "Cheetos", "Caesar");
-	echo $first1->No();
-
-
+	$first1 = new yum("Pepperoni", "Cheese", "Cheetos", "Caesar", "Pumpkin");
+	echo $first1->No() . "<br />";
+	echo $first1->what();
 
 
 		class Cars
@@ -106,10 +103,10 @@
 
 		function Sis() 
 		{
-			return "<br />" . "van: " . $this->van . "<br />" . 
-					"sedan: " . $this->sedan . "<br />" . 
-				    "convertible: " . $this->convertible . "<br />" .
-				     "suv: " . $this->suv; 
+			return "<br />" . "Van: " . $this->van . "<br />" . 
+					"Sedan: " . $this->sedan . "<br />" . 
+				    "Convertible: " . $this->convertible . "<br />" .
+				     "Suv: " . $this->suv; 
 
 		}
 	}
@@ -121,13 +118,14 @@
 			$this->truck = $truck;
 		}
 		function when() {
-			return $this->truck;
+			return "Truck:" . $this->truck . "<br />";
 		}	
 	}
 
 
-	$new1 = new life("Honda Odessey", "BMW 3 Series", "Bentley Continental GT ", "Cadillac Escalade");
-	echo $new1->Sis();
+	$new1 = new life("Honda Odessey", "BMW 3 Series", "Bentley Continental GT ", "Cadillac Escalade", "Sierra Pick-Up");
+	echo $new1->Sis() . "<br />";
+	echo $new1->when();
 
 
 
