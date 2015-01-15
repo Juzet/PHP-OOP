@@ -9,12 +9,12 @@ else {
 }
 $new = array('please' , 'do' , 'work');
 
-echo is_array($new) ? 'Ijn' : 'is not an Array';
+echo is_array($new) ? '<p>Ijn</P>' : 'is not an Array';
 // echo "\n";</br>
 
 $old = 'blahs'; 
 
-echo is_array($old) ? 'I' : 'mean I guess';
+echo is_array($old) ? 'I' : '<p>mean I guess</p>';
 
 function get_me($oj)
 {
@@ -28,7 +28,7 @@ function get_me($oj)
 // Declare a new class instance and fill up 
 // some values
 $oj = new stdClass();
-$oj->me = array('Juzet', 'Ron', 'Fen');
+$oj->me = array('<p>Juzet', 'Ron', 'Fen</p>');
 
 var_dump(get_me(null));
 var_dump(get_me($oj));
